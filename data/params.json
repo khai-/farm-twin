@@ -1,0 +1,148 @@
+{
+ "device": "container2",
+ "step_minutes": 10,
+ "data": {
+  "raw_readings": 11845,
+  "kept_after_cleaning": 11842,
+  "from": "2024-06-16",
+  "to": "2025-07-26",
+  "train_until": "2025-05-07",
+  "clean_ranges": {
+   "temperature": [
+    10,
+    45
+   ],
+   "humidity": [
+    20,
+    100
+   ],
+   "CO2": [
+    300,
+    10000
+   ]
+  }
+ },
+ "climate": {
+  "temperature": {
+   "daily_coef": [
+    28.52523949850796,
+    -1.0246615559922045,
+    -0.21109599101631593,
+    0.7985070735039366,
+    -0.04949815775223179,
+    -0.05318387789253517,
+    0.1703415257493896
+   ],
+   "harmonics": 3,
+   "phi": 0.98,
+   "noise_sd": 0.2911855258582999,
+   "pairs": 9158,
+   "usual_min": 27.21914055268416,
+   "usual_max": 30.431255644186038
+  },
+  "humidity": {
+   "daily_coef": [
+    84.99646265595861,
+    2.705810422879247,
+    0.40126955088266475,
+    -2.1902490688549543,
+    0.047609991760114406,
+    0.40947866252497306,
+    -0.44248086952677845
+   ],
+   "harmonics": 3,
+   "phi": 0.992,
+   "noise_sd": 1.3542048667273237,
+   "pairs": 9158,
+   "usual_min": 79.91208126040333,
+   "usual_max": 88.7962977448543
+  },
+  "CO2": {
+   "daily_coef": [
+    677.6589496638599,
+    43.927442955442366,
+    -52.78121546608831,
+    20.23813692540058,
+    33.180923012981594,
+    -26.04819123944024,
+    9.294478691495865
+   ],
+   "harmonics": 3,
+   "phi": 0.997,
+   "noise_sd": 68.32133506715587,
+   "pairs": 9158,
+   "usual_min": 557.721881957714,
+   "usual_max": 768.5836914526321
+  }
+ },
+ "check": {
+  "temperature": {
+   "1h": {
+    "windows": 361,
+    "model_mae": 0.8047684168884011,
+    "no_change_mae": 0.918005540166205,
+    "usual_for_hour_mae": 2.18794075058253
+   },
+   "6h": {
+    "windows": 54,
+    "model_mae": 2.472970620192471,
+    "no_change_mae": 4.055555555555556,
+    "usual_for_hour_mae": 2.2992928792564222
+   }
+  },
+  "humidity": {
+   "1h": {
+    "windows": 361,
+    "model_mae": 3.267343844754313,
+    "no_change_mae": 3.5249307479224377,
+    "usual_for_hour_mae": 7.120033139139714
+   },
+   "6h": {
+    "windows": 54,
+    "model_mae": 9.033114818424217,
+    "no_change_mae": 12.074074074074078,
+    "usual_for_hour_mae": 7.155942244554807
+   }
+  },
+  "CO2": {
+   "1h": {
+    "windows": 361,
+    "model_mae": 38.64423796802421,
+    "no_change_mae": 32.79224376731302,
+    "usual_for_hour_mae": 118.44059471202867
+   },
+   "6h": {
+    "windows": 54,
+    "model_mae": 129.6243980894787,
+    "no_change_mae": 99.27777777777777,
+    "usual_for_hour_mae": 122.64406448317762
+   }
+  }
+ },
+ "actuators": {
+  "source": "ASSUMED, not fitted. Replace with a step test: run each actuator alone for 30 minutes and log the sensors.",
+  "response_rate_per_step": 0.4,
+  "humidifier": {
+   "humidity": 12.0,
+   "temperature": -0.4
+  },
+  "spray": {
+   "humidity": 6.0,
+   "temperature": -0.2
+  },
+  "vent1": {
+   "humidity": -6.0,
+   "CO2_excess_fraction": -0.45
+  },
+  "vent2": {
+   "humidity": -6.0,
+   "CO2_excess_fraction": -0.45
+  },
+  "light": {
+   "temperature": 0.4
+  },
+  "pump": {},
+  "fill": {},
+  "outside_CO2": 420.0
+ }
+}
