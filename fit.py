@@ -144,10 +144,10 @@ out = {
     "actuators": {
         "source": "ASSUMED, not fitted. Replace with a step test: run each actuator alone for 30 minutes and log the sensors.",
         "response_rate_per_step": 0.4,
-        "humidifier": {"humidity": 12.0, "temperature": -0.4},
+        "humidifier": {"humidity": 14.0, "temperature": -0.4},
         "spray": {"humidity": 6.0, "temperature": -0.2},
-        "vent1": {"humidity": -6.0, "CO2_excess_fraction": -0.45},
-        "vent2": {"humidity": -6.0, "CO2_excess_fraction": -0.45},
+        "vent1": {"humidity": -4.0, "CO2_excess_fraction": -0.45},
+        "vent2": {"humidity": -4.0, "CO2_excess_fraction": -0.45},
         "light": {"temperature": 0.4},
         "pump": {}, "fill": {},
         "outside_CO2": 420.0,
